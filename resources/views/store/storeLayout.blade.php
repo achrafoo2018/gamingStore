@@ -63,13 +63,13 @@
         <div id="top-header">
             <div class="container">
                 <ul id="head_links" class="header-links pull-left">
-                    <li><a href="#"><i class="fa fa-phone"></i> +000-00-00-00</a></li>
+                    <li><a href="#"><i class="fa fa-phone"></i> +216 00 000 000</a></li>
                     <li><a href="#"><i class="fa fa-envelope-o"></i> support@Gkeys.com</a></li>
-                    <li><a href="#"><i class="fa fa-map-marker"></i> Banani, Road 11</a></li>
+                    <li><a href="#"><i class="fa fa-map-marker"></i> Ben Arous, Radès</a></li>
                 </ul>
                 <ul class="header-links pull-right">
                     @if(session()->has('user'))
-                      <li><a style="color:white" href="{{route('user.history')}}">{{session()->get('user')->full_name}} </a></li>  
+                      <li><a style="color:white" href="#{{-- {{route('user.history')}} --}}">{{session()->get('user')->full_name}} </a></li>  
                       <li><a href="{{route('user.logout')}}"><i class="fa fa-user-o"></i> Logout</a></li>
                     @else
                     <li><a href="{{route('user.login')}}"><i class="fa fa-user-o"></i> Login</a></li>
@@ -91,9 +91,9 @@
                     <!-- LOGO -->
                     <div class="col-md-3">
                         <div class="header-logo">
-                            <a href="{{route('user.home')}}" class="logo">
+                            {{-- <a href="{{route('user.home')}}" class="logo">
                                 <img src="{{asset('img/logo.png')}}" alt="">
-                            </a>
+                            </a> --}}
                         </div>
                     </div>
                     <!-- /LOGO -->
@@ -101,7 +101,7 @@
                     <!-- SEARCH BAR -->
                     <div class="col-md-6">
                         <div class="header-search">
-                            <form action="{{route('user.search')}}" method="get">
+                            <form action="#{{-- {{route('user.search')}} --}}" method="get">
                                 <div class="custom_search_top" >
                                     <input class="input" style="border-radius: 40px 0px 0px 40px;" name="n" placeholder="Search here">
                                     <button  class="search-btn">Search</button>
@@ -116,7 +116,7 @@
                         <div class="header-ctn">
                             <!-- Cart -->
                             <div  class="dropdown">
-                                <a class="dropdown-toggle " id="custom_shopping_cart" href="{{route('user.cart')}}">
+                                <a class="dropdown-toggle " id="custom_shopping_cart" href="#{{-- {{route('user.cart')}} --}}">
                                     <i class="fa fa-shopping-cart"></i>
                                     <span>Your Cart</span>
                                 </a>
@@ -157,12 +157,12 @@
                         @foreach($cat as $c)
                         <li class="{{$c->id == $a ? 'active' : ''}}"><a href="{{route('user.search.cat',['id'=>$c->id])}}" >{{$c->name}}</a></li>
                         @endforeach
-                        <li class="{{$a == -1  ? 'active' : ''}}"><a href="search">Browse All</a></li>
-                    @else
+{{--                         <li class="{{$a == -1  ? 'active' : ''}}"><a href="search">Browse All</a></li>
+ --}}                    @else
                         @foreach($cat as $c)
                         <li ><a href="{{route('user.search.cat',['id'=>$c->id])}}" >{{$c->name}}</a></li>
                         @endforeach
-                        <li ><a href="{{route('user.search')}}">Browse All</a></li>
+                        {{-- <li ><a href="{{route('user.search')}}">Browse All</a></li> --}}
                     @endif
                     
                 </ul>
@@ -267,8 +267,8 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                                 incididunt ut.</p>
                             <ul class="footer-links">
-                                <li><a href="#"><i class="fa fa-map-marker"></i>1734 Stonecoal Road</a></li>
-                                <li><a href="#"><i class="fa fa-phone"></i>+021-95-51-84</a></li>
+                                <li><a href="#"><i class="fa fa-map-marker"></i>Ben Arous, Radès</a></li>
+                                <li><a href="#"><i class="fa fa-phone"></i>+216 00 000 000</a></li>
                                 <li><a href="#"><i class="fa fa-envelope-o"></i>email@email.com</a></li>
                             </ul>
                         </div>
@@ -278,11 +278,11 @@
                         <div class="footer">
                             <h3 class="footer-title">Categories</h3>
                             <ul class="footer-links">
-                                <li><a href="#">Hot deals</a></li>
-                                <li><a href="#">Laptops</a></li>
-                                <li><a href="#">Smartphones</a></li>
-                                <li><a href="#">Cameras</a></li>
-                                <li><a href="#">Accessories</a></li>
+                                <li><a href="#">RPG Games</a></li>
+                                <li><a href="#">Action Games</a></li>
+                                <li><a href="#">Arcade Games</a></li>
+                                <li><a href="#">Adventure Games</a></li>
+                                <li><a href="#">Racing Games</a></li>
                             </ul>
                         </div>
                     </div>
