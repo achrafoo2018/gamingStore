@@ -65,7 +65,7 @@
                                             <th>Status</th>
                                             <th>Key</th>
                                         </thead>
-                                        <tbody>
+                                        {{-- <tbody>
                                             @foreach($sale as $s)
                                                 @foreach($all as $c)
                                                 @if($c[0]==$s->id)
@@ -87,7 +87,7 @@
                                             @endif
                                             @endforeach
                                             @endforeach
-                                            </tbody>
+                                            </tbody> --}}
                                     </table>
                                 </div>
                             </div>

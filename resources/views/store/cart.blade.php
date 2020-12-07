@@ -124,8 +124,9 @@ label.error {
                     @if($all != null)
                    <form method="post" name="cart">
                         {{csrf_field()}}
-                        <input type="submit" id="confirm_order"  name="order" class="primary-btn order-submit" value="Confirm order">
                     </form>
+                    <input type="submit" id="confirm_order"  name="order" class="primary-btn order-submit" value="Confirm order">
+
                     @else
                         <div class="col-md-13 text-center mt-3">
                             <a class="text-center" href="{{route('user.home')}}"><input type="button"  class="primary-btn" value="Shop Now"></a>
